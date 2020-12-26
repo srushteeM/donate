@@ -10,7 +10,7 @@ export const TabNavigator =  createBottomTabNavigator({
 Donate :{
     screen : DonateScreen,
         navigationOptions:{
-           tabBarIcon : <Icon name="hand-holding-medical" type="font-awesome" size={25} /> , 
+           tabBarIcon : <Icon name="at" type="font-awesome" size={25} /> , 
            tabBarLabel : 'Donate'
        }
 },
