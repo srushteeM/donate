@@ -23,7 +23,7 @@ export default class RequestScreen extends Component{
         var uniqueId = this.createUniqueId()
         db.collection('requested_items').add({
             'user_id':userId,
-            'item':this.state.item,
+            'item_name':this.state.item,
             'reason':this.state.reason,
             'request_id':uniqueId
         })
