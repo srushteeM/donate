@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
-import {Text,View,Icon} from 'react-native'
+import {Text,View} from 'react-native'
+import {Icon} from 'react-native-elements'
 import {createBottomTabNavigator} from 'react-navigation-tabs'
 
 import DonateScreen from '../screens/DonateScreen'
@@ -9,7 +10,7 @@ export const TabNavigator =  createBottomTabNavigator({
 Donate :{
     screen : DonateScreen,
         navigationOptions:{
-         //  tabBarIcon : <Icon name = "hand-holding-medical" type = "font-awesome" size = {25} /> , 
+           tabBarIcon : <Icon name="hand-holding-medical" type="font-awesome" size={25} /> , 
            tabBarLabel : 'Donate'
        }
 },
@@ -17,7 +18,7 @@ Donate :{
 Request :{
     screen : RequestScreen,
     navigationOptions:{
-       // tabBarIcon : <Icon name = "shopping-basket" type = "font-awesome" size = {25} /> , 
+        tabBarIcon : <Icon name="shopping-basket" type="font-awesome" size={25} /> , 
         tabBarLabel : 'Request'
     }
 }
