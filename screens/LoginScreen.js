@@ -22,7 +22,7 @@ export default class LoginScreen extends Component{
 
     userLogin=(email,password)=>{
         firebase.auth().signInWithEmailAndPassword(email,password)
-        .then(()=>{this.props.navigation.navigate('Settings')})
+        .then(()=>{this.props.navigation.navigate('Request')})
         .catch((error)=>{
             var errorCode = error.Code
             var errorMessage = error.Message
