@@ -22,10 +22,10 @@ export default class DonateScreen extends Component{
          })
      }
 
-    keyExtractor = (item,index) => index.tostring()
+    keyExtractor = (item,index) => index.toString()
     
     renderItem=({item,i})=>{
-     return(<ListItem key={i} title={item.item} subtitle={item.reason} titleStyle={{color:'black', fontWeight:'bold'}} rightElement={<TouchableOpacity><Text>Donate</Text></TouchableOpacity>} bottomDivider /> ) 
+     return(<ListItem key={i} title={item.item_name} subtitle={item.reason} titleStyle={{color:'black', fontWeight:'bold'}} rightElement={<TouchableOpacity><Text>Donate</Text></TouchableOpacity>} bottomDivider /> ) 
     }
     componentDidMount(){
         this.getAllRequests()
@@ -43,8 +43,8 @@ export default class DonateScreen extends Component{
               {
                 this.state.allRequests.length === 0
 
-                ?( <View> <Text style={{ fontSize: 20}}>List Of All Requested Books</Text> </View> )
-                :( <FlatList keyExtractor={this.keyExtractor} data={this.state.allRequests} renderItem={this.renderItem}/>)       
+                ?( <Text style={{ fontSize: 20}}>List Of All Requested Books</Text>  )
+                :( <FlatList keyExtractor={this.keyExtractor} data={this.state.allRequests} renderItem={this.renderItem}/> )       
               }
             </View>
           </View>
